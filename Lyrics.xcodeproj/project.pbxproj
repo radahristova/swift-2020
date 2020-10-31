@@ -15,7 +15,11 @@
 		C5009979254C0AAD00C1B91A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5009978254C0AAD00C1B91A /* SearchTableViewController.swift */; };
 		C500997C254C0AF100C1B91A /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C500997B254C0AF100C1B91A /* TextFieldTableViewCell.swift */; };
 		C500997F254C0C9700C1B91A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C500997E254C0C9700C1B91A /* API.swift */; };
-		C5009982254C148A00C1B91A /* LyricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5009981254C148A00C1B91A /* LyricsTableViewController.swift */; };
+		C5009982254C148A00C1B91A /* LyricsSearchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5009981254C148A00C1B91A /* LyricsSearchedViewController.swift */; };
+		C54D3942254D7E0400AAF02A /* SavedLyricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D3941254D7E0400AAF02A /* SavedLyricsTableViewController.swift */; };
+		C54D3945254D7F5200AAF02A /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D3944254D7F5200AAF02A /* Saver.swift */; };
+		C54D3948254D819200AAF02A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D3947254D819200AAF02A /* Song.swift */; };
+		C54D3951254DC1B000AAF02A /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D3950254DC1B000AAF02A /* LyricsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +33,11 @@
 		C5009978254C0AAD00C1B91A /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C500997B254C0AF100C1B91A /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		C500997E254C0C9700C1B91A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		C5009981254C148A00C1B91A /* LyricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsTableViewController.swift; sourceTree = "<group>"; };
+		C5009981254C148A00C1B91A /* LyricsSearchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsSearchedViewController.swift; sourceTree = "<group>"; };
+		C54D3941254D7E0400AAF02A /* SavedLyricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLyricsTableViewController.swift; sourceTree = "<group>"; };
+		C54D3944254D7F5200AAF02A /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
+		C54D3947254D819200AAF02A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		C54D3950254DC1B000AAF02A /* LyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +72,17 @@
 			children = (
 				C5009961254C09B200C1B91A /* AppDelegate.swift */,
 				C5009963254C09B200C1B91A /* SceneDelegate.swift */,
+				C54D3947254D819200AAF02A /* Song.swift */,
+				C500997E254C0C9700C1B91A /* API.swift */,
+				C54D3944254D7F5200AAF02A /* Saver.swift */,
 				C5009978254C0AAD00C1B91A /* SearchTableViewController.swift */,
-				C5009981254C148A00C1B91A /* LyricsTableViewController.swift */,
+				C5009981254C148A00C1B91A /* LyricsSearchedViewController.swift */,
+				C54D3941254D7E0400AAF02A /* SavedLyricsTableViewController.swift */,
+				C54D3950254DC1B000AAF02A /* LyricsViewController.swift */,
 				C500997B254C0AF100C1B91A /* TextFieldTableViewCell.swift */,
 				C5009967254C09B200C1B91A /* Main.storyboard */,
 				C500996A254C09B300C1B91A /* Assets.xcassets */,
 				C500996C254C09B300C1B91A /* LaunchScreen.storyboard */,
-				C500997E254C0C9700C1B91A /* API.swift */,
 				C500996F254C09B300C1B91A /* Info.plist */,
 			);
 			path = Lyrics;
@@ -146,12 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54D3948254D819200AAF02A /* Song.swift in Sources */,
 				C5009962254C09B200C1B91A /* AppDelegate.swift in Sources */,
-				C5009982254C148A00C1B91A /* LyricsTableViewController.swift in Sources */,
+				C5009982254C148A00C1B91A /* LyricsSearchedViewController.swift in Sources */,
+				C54D3942254D7E0400AAF02A /* SavedLyricsTableViewController.swift in Sources */,
 				C5009979254C0AAD00C1B91A /* SearchTableViewController.swift in Sources */,
 				C5009964254C09B200C1B91A /* SceneDelegate.swift in Sources */,
+				C54D3951254DC1B000AAF02A /* LyricsViewController.swift in Sources */,
 				C500997C254C0AF100C1B91A /* TextFieldTableViewCell.swift in Sources */,
 				C500997F254C0C9700C1B91A /* API.swift in Sources */,
+				C54D3945254D7F5200AAF02A /* Saver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

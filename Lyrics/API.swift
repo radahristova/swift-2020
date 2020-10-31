@@ -7,23 +7,30 @@
 
 import Foundation
 
-typealias Song = (artist: String, title: String)
+protocol APIDelegate: class {
+    func didGetSongs(lyrics: String)
+}
 
 class API {
-    static func lyrics(of song: Song, completionHandler: @escaping (String)->()) {
-        guard var url = URL(string: "https://api.lyrics.ovh/v1/") else {
+    
+    weak var delegate: APIDelegate?
+    
+    // https://lyricsovh.docs.apiary.io/
+    func getLyrics(of song: Song?) {
+        guard let song = song,
+              var url = URL(string: "https://api.lyrics.ovh/v1/") else {
             return
         }
         url.appendPathComponent(song.artist)
         url.appendPathComponent(song.title)
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             guard let data = data,
                   let dictionary = try? JSONSerialization
             .jsonObject(with: data, options: .allowFragments) as? [String: Any],
                   let lyrics = dictionary["lyrics"] as? String else {
                 return
             }
-            completionHandler(lyrics)
+            self?.delegate?.didGetSongs(lyrics: lyrics)
         }
         task.resume()
     }

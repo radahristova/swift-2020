@@ -14,7 +14,7 @@ class SearchTableViewController: UITableViewController {
             .textField.text ?? ""
         let title = (tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? TextFieldTableViewCell)?
             .textField.text ?? ""
-        return Song(artist, title)
+        return Song(artist: artist, title: title)
     }
     
     // MARK: - Table view data source
@@ -47,9 +47,10 @@ class SearchTableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? LyricsTableViewController {
+        if let destination = segue.destination as? LyricsSearchedViewController {
             destination.song = songFromCells()
         }
     }
 
 }
+
