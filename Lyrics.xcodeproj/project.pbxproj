@@ -72,20 +72,44 @@
 			children = (
 				C5009961254C09B200C1B91A /* AppDelegate.swift */,
 				C5009963254C09B200C1B91A /* SceneDelegate.swift */,
+				C500996F254C09B300C1B91A /* Info.plist */,
+				C59FCCE5254ED7F800994B30 /* Models */,
+				C59FCCE6254ED80600994B30 /* Controllers */,
+				C59FCCE7254ED81600994B30 /* Views */,
+			);
+			path = Lyrics;
+			sourceTree = "<group>";
+		};
+		C59FCCE5254ED7F800994B30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				C54D3947254D819200AAF02A /* Song.swift */,
 				C500997E254C0C9700C1B91A /* API.swift */,
 				C54D3944254D7F5200AAF02A /* Saver.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C59FCCE6254ED80600994B30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				C5009978254C0AAD00C1B91A /* SearchTableViewController.swift */,
 				C5009981254C148A00C1B91A /* LyricsSearchedViewController.swift */,
 				C54D3941254D7E0400AAF02A /* SavedLyricsTableViewController.swift */,
 				C54D3950254DC1B000AAF02A /* LyricsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C59FCCE7254ED81600994B30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				C500997B254C0AF100C1B91A /* TextFieldTableViewCell.swift */,
 				C5009967254C09B200C1B91A /* Main.storyboard */,
 				C500996A254C09B300C1B91A /* Assets.xcassets */,
 				C500996C254C09B300C1B91A /* LaunchScreen.storyboard */,
-				C500996F254C09B300C1B91A /* Info.plist */,
 			);
-			path = Lyrics;
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

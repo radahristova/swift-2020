@@ -13,11 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // When the application loads the saved songs are loaded
         Saver.instance.getSongs()
         return true
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
+        // The songs are saved persistently only when need - right before the app is terminated
         Saver.instance.saveSongs()
     }
 
